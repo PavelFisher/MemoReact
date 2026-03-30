@@ -15,6 +15,7 @@ export function Card({id, clicked, found, numberImg, onClick}: {
     if (clicked) {
     //     path = `../public/images/image${numberImg}.png`;
     }
+    console.log(numberImg);
 
 
     const handleClick = () => {
