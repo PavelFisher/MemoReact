@@ -1,0 +1,193 @@
+:root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+}
+
+a:hover {
+    color: #535bf2;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+}
+
+/*button {*/
+/*    border-radius: 8px;*/
+/*    border: 1px solid transparent;*/
+/*    padding: 0.6em 1.2em;*/
+/*    font-size: 1em;*/
+/*    font-weight: 500;*/
+/*    font-family: inherit;*/
+/*    background-color: #1a1a1a;*/
+/*    cursor: pointer;*/
+/*    transition: border-color 0.25s;*/
+/*}*/
+
+button:hover {
+    border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        color: #213547;
+        background-color: #ffffff;
+    }
+
+    a:hover {
+        color: #747bff;
+    }
+
+    button {
+        background-color: #f9f9f9;
+    }
+}
+
+.card {
+    /* 1. Задаем размеры */
+    width: 50px;
+    height: 50px;
+
+    /* 2. Убираем стандартные стили кнопки */
+    padding: 2px;
+    margin: 2px;
+    border: none;
+    background-color: #213547;
+    cursor: pointer;
+    /*background-image: url('assets\images\Image5.png');*/
+    background-size: cover; /* Масштабирование на весь блок */
+    background-position: center; /* Центрирование */
+
+
+    /* 3. Центрируем картинку внутри кнопки */
+    /*display: flex;*/
+    align-items: center;
+    justify-content: center;
+
+    /* 4. Скругление (опционально) */
+    border-radius: 12px;
+    overflow: hidden; /* Чтобы картинка не вылезала за скругления */
+    /*transition: transform 0.2s ease; !* Анимация *!*/
+}
+
+.card:hover {
+    /*filter: drop-shadow(0 0 4em rgba(9, 9, 9, 0.67));*/
+    box-shadow: 0 0 12px #6633FF;
+}
+
+
+.image {
+    /* 1. Задаем размеры */
+    width: 50px;
+    height: 50px;
+
+    /* 2. Убираем стандартные стили кнопки */
+    padding: -2px;
+    margin: -2px;
+    border: none;
+    background-color: #213a47;
+    cursor: pointer;
+    background-size: cover; /* Масштабирование на весь блок */
+    background-position: center; /* Центрирование */
+
+
+    /* 3. Центрируем картинку внутри кнопки */
+    /*display: flex;*/
+    align-items: center;
+    justify-content: center;
+
+    /* 4. Скругление (опционально) */
+    border-radius: 12px;
+    overflow: hidden; /* Чтобы картинка не вылезала за скругления */
+    /*transition: transform 0.2s ease; !* Анимация *!*/
+}
+
+.app {
+    width: 420px;
+    height: 400px;
+    background-color: #031d33;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.card-empty {
+    /* 1. Задаем размеры */
+    width: 50px;
+    height: 50px;
+
+    /* 2. Убираем стандартные стили кнопки */
+    padding: 2px;
+    margin: 2px;
+    border: none;
+    background-color: #031d33;
+    background-size: cover; /* Масштабирование на весь блок */
+    background-position: center; /* Центрирование */
+
+    border-radius: 12px;
+    overflow: hidden; /* Чтобы картинка не вылезала за скругления */
+}
+
+.score {
+    /* 1. Задаем размеры */
+    width: 70px;
+    height: 20px;
+
+    /* 2. Убираем стандартные стили кнопки */
+    padding: 2px;
+    margin: 20px;
+    border: none;
+    background-color: #af4b5f;
+    background-size: cover; /* Масштабирование на весь блок */
+    background-position: left; /* Центрирование */
+
+    border-radius: 12px;
+    overflow: hidden; /* Чтобы картинка не вылезала за скругления */
+}
+
+.point {
+    /* 1. Задаем размеры */
+    width: 120px;
+    height: 20px;
+    color: black;
+    padding: 2px;
+    margin: 20px;
+    border: none;
+    background-color: white;
+    background-size: cover; /* Масштабирование на весь блок */
+    background-position: left; /* Центрирование */
+    overflow: hidden; /* Чтобы картинка не вылезала за скругления */
+}
