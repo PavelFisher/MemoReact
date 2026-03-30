@@ -1,8 +1,4 @@
-// import viteLogo from '/vite.svg'
-
-// import {useState} from "react";
-import Back from "../public/images/back.png"
-
+import { Back, cardIconsFactory } from './components/icons';
 
 export function Card({id, clicked, found, numberImg, onClick}: {
     id: number;
@@ -11,17 +7,14 @@ export function Card({id, clicked, found, numberImg, onClick}: {
     numberImg: number;
     onClick: (id: number) => void;
 }) {
-    // let path = `../public/images/back.png`;
-    if (clicked) {
-    //     path = `../public/images/image${numberImg}.png`;
-    }
-    console.log(numberImg);
-
+    const Icon = clicked && cardIconsFactory[numberImg] != null
+        ? cardIconsFactory[numberImg]
+        : Back;   
 
     const handleClick = () => {
-
         onClick(id);
     };
+
     if (found) {
         return (
             <button className="card-empty" disabled>
@@ -29,9 +22,8 @@ export function Card({id, clicked, found, numberImg, onClick}: {
     } else {
         return (
             <button className="card" onClick={handleClick}>
-                <img className="image" src={Back} alt="Icon"/>
+                <Icon className="image" alt="Card" />
             </button>)
     }
 }
-
 export default Card;
