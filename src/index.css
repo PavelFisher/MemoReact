@@ -83,7 +83,6 @@ button:focus-visible {
     border: none;
     background-color: #213547;
     cursor: pointer;
-    /*background-image: url('assets\images\Image5.png');*/
     background-size: cover; /* Масштабирование на весь блок */
     background-position: center; /* Центрирование */
 

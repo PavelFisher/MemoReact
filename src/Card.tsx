@@ -9,9 +9,9 @@ export function Card({id, clicked, found, numberImg, onClick}: {
     numberImg: number;
     onClick: (id: number) => void;
 }) {
-    let path = `src/assets/images/Back.png`;
+    let path = `src/assets/images/back.png`;
     if (clicked) {
-        path = `src/assets/images/Image${numberImg}.png`;
+        path = `src/assets/images/image${numberImg}.png`;
     }
 
 
