@@ -1,22 +1,16 @@
-// import viteLogo from '/vite.svg'
-
-// import {useState} from "react";
-import Back from "../public/images/back.png"
+import {Back, cardIconsFactory} from './assets/images';
 
 
 export function Card({id, clicked, found, numberImg, onClick}: {
     id: number;
     clicked: boolean;
-    found:boolean;
+    found: boolean;
     numberImg: number;
     onClick: (id: number) => void;
 }) {
-    // let path = `../public/images/back.png`;
-    if (clicked) {
-    //     path = `../public/images/image${numberImg}.png`;
-    }
-    console.log(numberImg);
-
+    const Icon = clicked && cardIconsFactory[numberImg] != null
+        ? cardIconsFactory[numberImg]
+        : Back;
 
     const handleClick = () => {
 
@@ -29,7 +23,7 @@ export function Card({id, clicked, found, numberImg, onClick}: {
     } else {
         return (
             <button className="card" onClick={handleClick}>
-                <img className="image" src={Back} alt="Icon"/>
+                <Icon className="image" alt="Card"/>
             </button>)
     }
 }

@@ -47,8 +47,7 @@ function Board() {
                 }
 
             } else {
-
-                if (selectedCardId2 != undefined) {
+                if (selectedCardId2 != undefined && selectedCardId2 != selectedCardId1) {
                     const delay = (ms: number) => new Promise(res => setTimeout(res, ms));
                     await delay(1000); // Задержка 1 секунда
                     const foundCard1 = fetchedCards.find((card) => card.id === selectedCardId1);
@@ -93,7 +92,7 @@ function Board() {
 
         if (selectedCardId1 === undefined) {
             setSelectedCardId1(Id);
-        } else if (selectedCardId2 === undefined)
+        } else if (selectedCardId2 === undefined && selectedCardId1 != Id)
             setSelectedCardId2(Id);
         else return;
 
